@@ -2,7 +2,8 @@ let roll=document.getElementById("inputState").value;
 
 function rollDice() {
     console.log(roll);
-    
+    let risultatoUser="";
+    let risultatoComputer="";
     let NofRolls=parseInt(roll);
     console.log(NofRolls);
     for(let i=0;i<NofRolls;i++){
@@ -10,25 +11,26 @@ function rollDice() {
         
         let randomNumber1 = Math.floor(Math.random() * 6) + 1;
         let randomNumber2 = Math.floor(Math.random() * 6) + 1;
-        document.getElementById("dice1").innerHTML += '<img src="./img/face'+randomNumber1+'.png" alt="dice logo" width="50" height="50"></img>';
-        /*
-        document.querySelector(".img2").setAttribute("src",
-        "face" + randomNumber2 + ".png");
-
-    if (randomNumber1 === randomNumber2) {
-        document.querySelector("h1").innerHTML = "Draw!";
+        document.getElementById("diceGiocatore").innerHTML += '<img src="./img/face'+randomNumber1+'.png" alt="dice logo" width="50" height="50"></img>';
+        document.getElementById("diceComputer").innerHTML += '<img src="./img/face'+randomNumber2+'.png" alt="dice logo" width="50" height="50"></img>';
+        risultatoUser+=randomNumber1;
+        risultatoComputer+=randomNumber2;
     }
 
-    else if (randomNumber1 < randomNumber2) {
-        document.querySelector("h1").innerHTML
-            = (player2 + " WINS!");
+    if (risultatoUser === risultatoComputer) {
+        document.querySelector("h2").innerHTML = "Pareggio!";
+    }
+
+    else if (risultatoUser < risultatoComputer) {
+        document.querySelector("h2").innerHTML
+            = ("HA VINTO IL COMPUTER!");
     }
 
     else {
-        document.querySelector("h1").innerHTML
-            = (player1 + " WINS!");
-    }*/
-}
+        document.querySelector("h2").innerHTML
+            = ("HAI VINTO!");
+    }
+    document.getElementById("bottoneprincipale").innerHTML='<button class="btn btn-primary mt-2" type="submit" onClick="window.location.href=window.location.href">Vuoi riprovare?</button>';
 }  
 
 function check(){
