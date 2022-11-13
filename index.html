@@ -21,13 +21,8 @@
             riuscirai a battere il computer?</p>
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <label for="inputState" class="form-label">N. Rolls</label>
-                <select id="inputState" class="form-select" onchange="check()">
-                    <option selected>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
+                <label for="inputState" class="form-label">N. Rolls Max.100</label>
+                    <input id="inputState" type="number" class="form-control" value=1 onchange="check()">
             </div>
             <div id="bottoneprincipale" class="col-12">
                 <button type="submit" class="btn btn-primary mt-2" onclick="rollDice()">Rolla i dadi</button>
