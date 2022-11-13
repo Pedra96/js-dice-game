@@ -1,0 +1,23 @@
+*{
+    font-family:Arial, Helvetica, sans-serif ;
+    margin:0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: firebrick;
+}
+
+.my-container{
+    color: rgb(243, 243, 243);
+    width: 70%;
+    background-color: rgb(61, 60, 60);
+}
+
+.myBorder{
+    border-style: solid;
+    border-color: white;
+    border-radius: 20px;
+
+}
